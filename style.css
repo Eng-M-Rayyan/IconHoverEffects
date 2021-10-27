@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+}
+
+.navegation {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    position: relative;
+    height: 70px;
+}
+
+.navegation ul {
+    display: flex;
+    align-items: center;
+    width: 350px;
+}
+
+.navegation ul li {
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+}
+
+.navegation ul a {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+.navegation ul a .icon {
+    position: relative;
+    font-size: 30px;
+    line-height: 75px;
+    transition: 0.5s;
+}
+
+.navegation ul li.active a .icon {
+    transform: translateY(-6px);
+    font-size: 20px;
+}
+
+.navegation ul a .text {
+    position: absolute;
+    font-size: 12px;
+    font-weight: 400;
+    bottom: 20px;
+    text-transform: uppercase;
+    transition: 0.25s;
+    transform: scale(0);
+}
+
+.navegation ul li.active a .text {
+    transform: scale(1);
+}
+
+.indicator {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.navegation ul li:nth-child(1).active~.indicator {
+    background: #f53b57;
+    box-shadow: 0 15px 25px #f53b57;
+    transform: translateX(calc(70px * 0));
+}
+
+.navegation ul li:nth-child(2).active~.indicator {
+    background: #5d62fb;
+    box-shadow: 0 15px 25px #5d62fb;
+    transform: translateX(calc(70px * 1));
+}
+
+.navegation ul li:nth-child(3).active~.indicator {
+    background: #05c46b;
+    box-shadow: 0 15px 25px #05c46b;
+    transform: translateX(calc(70px * 2));
+}
+
+.navegation ul li:nth-child(4).active~.indicator {
+    background: #0fbcf9;
+    box-shadow: 0 15px 25px #0fbcf9;
+    transform: translateX(calc(70px * 3));
+}
+
+.navegation ul li:nth-child(5).active~.indicator {
+    background: #ffa801;
+    box-shadow: 0 15px 25px #ffa801;
+    transform: translateX(calc(70px * 4));
+}
